@@ -1,0 +1,10 @@
+/* TeamMember.css */
+.TeamMember {
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+  }
+  
+  .TeamMember:hover {
+    transform: translateY(-5px); /* Move the card up slightly */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a larger shadow */
+  }
+  
