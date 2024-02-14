@@ -38,18 +38,18 @@ const App = () => {
           <input
             type="text"
             placeholder="Search..."
-            className="px-5 py-1 rounded border"
+            className="px-5 py-1 rounded-2xl border"
             value={searchTerm}
             onChange={handleSearch}
           />
         </div>
       </nav>
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8 text-center">Our Team</h1>
+        
 
         {admins.length > 0 && (
           <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Administrators</h2>
+            <h2 className="text-2xl font-bold mb-4 mt-7 text-gray">Administrators</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {admins.map((member, index) => (
                 <TeamMember key={index} {...member} />
@@ -62,7 +62,7 @@ const App = () => {
 
         {members.length > 0 && (
           <section>
-            <h2 className="text-2xl font-bold mb-4">Members</h2>
+            <h2 className="text-2xl font-bold mb-4 text-gray">Members</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {members.map((member, index) => (
                 <TeamMember key={index} {...member} />
