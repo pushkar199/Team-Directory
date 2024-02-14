@@ -1,77 +1,4 @@
-// // App.js
-// import React, { useState, useEffect } from 'react';
-// import TeamMember from './components/TeamMember';
 
-// const App = () => {
-//   const [members, setMembers] = useState([]);
-//   const [filteredMembers, setFilteredMembers] = useState([]);
-//   const [searchTerm, setSearchTerm] = useState('');
-
-//   useEffect(() => {
-//     fetch('https://mocki.io/v1/ddb7e0a8-e218-4e36-b1be-b902cdb1c098')
-//       .then(response => response.json())
-//       .then(data => {
-//         setMembers(data);
-//         setFilteredMembers(data);
-//       })
-//       .catch(error => console.error('Error fetching data:', error));
-//   }, []);
-
-//   const handleSearch = event => {
-//     const searchTerm = event.target.value.toLowerCase();
-//     setSearchTerm(searchTerm);
-//     const filtered = members.filter(member => {
-//       const fullName = `${member.first_name} ${member.last_name}`.toLowerCase();
-//       return fullName.includes(searchTerm);
-//     });
-//     setFilteredMembers(filtered);
-//   };
-
-//   return (
-//     <div className="container mx-auto">
-//       <nav className="flex justify-between items-center bg-gray-800 p-4">
-//         <div className="text-white font-bold">Team</div>
-//         <div>
-//           <input
-//             type="text"
-//             placeholder="Search..."
-//             className="px-2 py-1 rounded border"
-//             value={searchTerm}
-//             onChange={handleSearch}
-//           />
-//         </div>
-//       </nav>
-//       <div className="mt-8">
-//         {filteredMembers.map((member, index) => (
-//           <div key={index} className="mb-4">
-//             {index === 0 || member.role !== filteredMembers[index - 1].role ? (
-//               <>
-//                 {index !== 0 && <hr className="my-4" />}
-//                 <div className="text-gray-700 font-bold">
-//                   {member.role === 'admin' ? 'Admins' : 'Members'}
-//                 </div>
-//               </>
-//             ) : null}
-//             <TeamMember
-//               name={`${member.first_name} ${member.last_name}`}
-//               image={member.img}
-//               role={member.role}
-//             />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default App;
-
-
-
-
-
-
-// App.jsx
 import React, { useState, useEffect } from 'react';
 import TeamMember from './components/TeamMember'; // Importing TeamMember component
 
@@ -105,13 +32,13 @@ const App = () => {
 
   return (
     <div className="container mx-auto">
-      <nav className="flex justify-between items-center bg-gray-800 p-4">
-        <div className="text-white font-bold">Team</div>
+      <nav className="flex justify-between items-center bg-skyblue p-4">
+        <div className="text-white font-bold text-2xl">Team</div>
         <div>
           <input
             type="text"
             placeholder="Search..."
-            className="px-2 py-1 rounded border"
+            className="px-5 py-1 rounded border"
             value={searchTerm}
             onChange={handleSearch}
           />
